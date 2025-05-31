@@ -41,8 +41,8 @@ jobs:
     with:
       SERVICE_LOCATION: ./
     secrets:
-      OSSRH_USER: ${{ secrets.OSSRH_USER }}
-      OSSRH_SECRET: ${{ secrets.OSSRH_SECRET }}
+      OSSRH_USER: ${{ secrets.OSSRH_NEW_USER }}
+      OSSRH_SECRET: ${{ secrets.OSSRH_NEW_SECRET }}
       OSSRH_URL: ${{ secrets.OSSRH_INJI_SNAPSHOT_URL }}
       OSSRH_TOKEN: ${{ secrets.OSSRH_TOKEN }}
       GPG_SECRET: ${{ secrets.GPG_SECRET }}
