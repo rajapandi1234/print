@@ -14,6 +14,12 @@
 	<name>print</name>
 	<url>https://github.com/mosip/print</url>
 	<description>This is a project for MOSIP printing functionality.</description>
+	<scm>
+        	<connection>scm:git:git://github.com/mosip/printy.git</connection>
+        	<developerConnection>scm:git:ssh://github.com:mosip/print.git</developerConnection>
+        	<url>https://github.com/mosip/print</url>
+        	<tag>HEAD</tag>
+   	</scm>
 	<licenses>
 		<license>
 			<name>MPL 2.0</name>
