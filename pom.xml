@@ -362,6 +362,7 @@
 						</goals>
 						<configuration>
 							<classifier>executable</classifier> <!-- Secondary artifact -->
+							<executable>true</executable> <!-- Makes JAR file executable on Unix -->
 							<attach>false</attach> <!-- CRITICAL: Don't publish to Maven Central -->
 						</configuration>
 					</execution>
