@@ -354,7 +354,7 @@
 							<goal>repackage</goal>
 						</goals>
 						<configuration>
-							<executable>false</executable> <!-- default is false; just explicit here -->
+							<executable>true</executable> <!-- default is false; just explicit here -->
 							<!-- No classifier -->
 							<!-- No layout -->
 						</configuration>
