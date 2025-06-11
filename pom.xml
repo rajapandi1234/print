@@ -349,23 +349,23 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>3.2.3</version>
 				<executions>
-        			  <execution>
-            			     <id>build-info</id>
-            			     <goals>
-                		        <goal>build-info</goal> <!-- Generate build metadata -->
-            			     </goals>
-        			  </execution>
-                                  <execution>
-            			      <id>repackage-executable</id>
-            			      <goals>
-                                        <goal>repackage</goal> <!-- Create executable JAR -->
-              			      </goals>
-            			     <configuration>
-                			<classifier>executable</classifier> <!-- Secondary artifact -->
-                			<executable>true</executable>
-            			     </configuration>
-        			  </execution>
-    				</executions>
+					<execution>
+						<id>build-info</id>
+						<goals>
+							<goal>build-info</goal> <!-- Generate build metadata -->
+						</goals>
+					</execution>
+					<execution>
+						<id>repackage-executable</id>
+						<goals>
+							<goal>repackage</goal> <!-- Create executable JAR -->
+						</goals>
+						<configuration>
+							<classifier>executable</classifier> <!-- Secondary artifact -->
+							<attach>false</attach> <!-- CRITICAL: Don't publish to Maven Central -->
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<artifactId>maven-enforcer-plugin</artifactId>
