@@ -348,16 +348,16 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>3.2.3</version>
+				<configuration>
+					<executable>true</executable>
+					<layout>ZIP</layout>
+				</configuration>
 				<executions>
 					<execution>
 						<goals>
+							<goal>build-info</goal>
 							<goal>repackage</goal>
 						</goals>
-						<configuration>
-							<executable>true</executable> <!-- default is false; just explicit here -->
-							<!-- No classifier -->
-							<!-- No layout -->
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
