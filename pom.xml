@@ -352,18 +352,18 @@
 					<execution>
 						<id>build-info</id>
 						<goals>
-							<goal>build-info</goal> <!-- Generate build metadata -->
+							<goal>build-info</goal>
 						</goals>
 					</execution>
 					<execution>
-						<id>repackage-executable</id>
+						<id>repackage</id> <!-- :white_check_mark: Use the default ID to enable auto-detection -->
 						<goals>
-							<goal>repackage</goal> <!-- Create executable JAR -->
+							<goal>repackage</goal>
 						</goals>
 						<configuration>
-							<classifier>executable</classifier> <!-- Secondary artifact -->
-							<executable>true</executable> <!-- Makes JAR file executable on Unix -->
-							<attach>false</attach> <!-- CRITICAL: Don't publish to Maven Central -->
+							<classifier>executable</classifier> <!-- :white_check_mark: Output JAR as -executable.jar -->
+							<executable>true</executable>
+							<attach>false</attach> <!-- Do not deploy this to central -->
 						</configuration>
 					</execution>
 				</executions>
