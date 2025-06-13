@@ -363,7 +363,7 @@
 						<configuration>
 							<classifier>executable</classifier> <!-- :white_check_mark: Output JAR as -executable.jar -->
 							 <executable>true</executable>
-							<!--	<attach>false</attach> <!-- Do not deploy this to central -->
+							<!--	<attach>false</attach>  Do not deploy this to central -->
 						</configuration>
 					</execution>
 				</executions>
