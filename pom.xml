@@ -83,16 +83,6 @@
 			</exclusions>
 		</dependency>
 		<dependency>
-    			<groupId>org.apache.maven</groupId>
-    			<artifactId>maven-archiver</artifactId>
-    			<version>3.6.1</version>
-		</dependency>
-		<dependency>
-        		<groupId>org.codehaus.plexus</groupId>
-        		<artifactId>plexus-archiver</artifactId>
-        		<version>4.9.0</version>
-    		</dependency>
-		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
 		    <artifactId>spring-cloud-starter-config</artifactId>
 			<exclusions>
@@ -300,17 +290,17 @@
             </snapshots>
         </repository>
     </repositories>
-	
+
 	<distributionManagement>
-                <snapshotRepository>
-                        <id>ossrh</id>
-                        <url>https://central.sonatype.com/repository/maven-snapshots/</url>
-                </snapshotRepository>
-                <repository>
-                        <id>ossrh</id>
-                        <url>https://central.sonatype.com/api/v1/publisher</url>
-                </repository>
-        </distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://central.sonatype.com/repository/maven-snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://central.sonatype.com/api/v1/publisher</url>
+		</repository>
+	</distributionManagement>
 	<build>
 		<plugins>
 			<plugin>
