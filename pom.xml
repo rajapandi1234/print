@@ -39,6 +39,7 @@
 		<maven.jar.plugin.version>3.0.2</maven.jar.plugin.version>
 		<maven.war.plugin.version>3.1.0</maven.war.plugin.version>		
 		<maven.jacoco.version>0.8.11</maven.jacoco.version>
+    <central.publishing.maven.plugin.version>0.7.0</central.publishing.maven.plugin.version>
 		<maven.sonar.plugin.version>3.7.0.1746</maven.sonar.plugin.version>
 		<maven.javadoc.version>3.2.0</maven.javadoc.version>
         <spring.security.test.version>5.0.5.RELEASE</spring.security.test.version>
@@ -258,7 +259,7 @@
 			<groupId>io.mosip.kernel</groupId>
 			<artifactId>kernel-auth-adapter</artifactId>
 			<version>1.2.1-SNAPSHOT</version>
-		</dependency>-->
+		</dependency> -->
 	</dependencies>
 	
     <repositories>
@@ -271,15 +272,15 @@
             <enabled>true</enabled>
             </snapshots>
         </repository>
-		<repository>
-			<id>ossrh-central</id>
-			<name>MavenCentralRepository</name>
-			<url>https://central.sonatype.com/repository/maven-snapshots</url>
-			<layout>default</layout>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
+	<repository>
+            <id>ossrh-central</id>
+            <name>MavenCentralRepository</name>
+            <url>https://central.sonatype.com/repository/maven-snapshots</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
         <repository>
             <id>central</id>
             <name>MavenCentral</name>
@@ -290,17 +291,18 @@
             </snapshots>
         </repository>
     </repositories>
-	
+
 	<distributionManagement>
-                <snapshotRepository>
-                        <id>ossrh</id>
-                        <url>https://central.sonatype.com/repository/maven-snapshots</url>
-                </snapshotRepository>
-                <repository>
-                        <id>ossrh</id>
-                        <url>https://central.sonatype.com/api/v1/publisher</url>
-                </repository>
-        </distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://central.sonatype.com/repository/maven-snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://central.sonatype.com/api/v1/publisher</url>
+		</repository>
+	</distributionManagement>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -348,6 +350,9 @@
 							<goal>build-info</goal>
 							<goal>repackage</goal>
 						</goals>
+						<configuration>
+							<attach>false</attach>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
@@ -442,18 +447,16 @@
 					<doclint>none</doclint>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>org.sonatype.central</groupId>
 				<artifactId>central-publishing-maven-plugin</artifactId>
-				<version>0.7.0</version>
+				<version>${central.publishing.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
 					<publishingServerId>ossrh</publishingServerId>
 					<autoPublish>false</autoPublish>
 				</configuration>
 			</plugin>
-
 		<plugin>
                   <groupId>org.apache.maven.plugins</groupId>
                   <artifactId>maven-source-plugin</artifactId>
@@ -468,7 +471,6 @@
                   </executions>
                 </plugin>
 
-      
                 <plugin>
                   <groupId>org.apache.maven.plugins</groupId>
                   <artifactId>maven-gpg-plugin</artifactId>
