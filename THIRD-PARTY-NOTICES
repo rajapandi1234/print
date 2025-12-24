@@ -109,7 +109,7 @@ Homepage: [http://www.slf4j.org/](http://www.slf4j.org/)
 ================================================================================
 Package: H2 Database (com.h2database:h2)
 Version: (Not specified)
-License: MPL 2.0 OR EPL 1.0 (dual-licensed)
+License: MPL 2.0
 Homepage: https://www.h2database.com/
 ================================================================================
 
@@ -123,7 +123,7 @@ Homepage: [https://github.com/eclipse-ee4j/jaf](https://github.com/eclipse-ee4j/
 ================================================================================
 Package: Jakarta Persistence (jakarta.persistence:jakarta.persistence-api)
 Version: 3.1.0
-License: BSD-3-Clause OR EPL-2.0 (Inferred from project’s official repository)
+License: BSD-3-Clause
 Homepage: [https://projects.eclipse.org/projects/ee4j.ja](https://projects.eclipse.org/projects/ee4j.ja)
 ================================================================================
 
@@ -291,7 +291,7 @@ Homepage: https://spring.io/projects/spring-cloud-config
 ================================================================================
 Package: JAXB API (javax.xml.bind:jaxb-api)
 Version: (Specify version from pom.xml)
-License: CDDL 1.1 OR GPL-2.0 with Classpath Exception
+License: CDDL 1.1 
 Homepage: https://javaee.github.io/jaxb-v2/
 ================================================================================
 
@@ -326,7 +326,7 @@ Homepage: https://eclipse-ee4j.github.io/jaxb-ri/
 ================================================================================
 Package: JavaBeans Activation Framework (javax.activation:activation)
 Version: (Specify version from pom.xml)
-License: CDDL 1.0 OR GPL-2.0 with Classpath Exception
+License: CDDL 1.0
 Homepage: https://javaee.github.io/javactivation/
 ================================================================================
 
